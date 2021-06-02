@@ -8,6 +8,10 @@ namespace HarryPotter.Classes.Roles
 {
 	public class HeadMaster : Roles
 	{
+		var Votes;
+		
+		HeadMaster.Votes = 1;
+		
 		public HeadMaster(ModdedPlayerClass owner)
 		{
 			RoleName = "Head Master";

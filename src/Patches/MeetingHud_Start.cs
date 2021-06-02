@@ -15,6 +15,17 @@ namespace HarryPotter.Patches
     {
         static void Prefix(MeetingHud __instance)
         {
+			if (Main.Instance.GetLocalModdedPlayer("HeadMaster")
+			{
+				foreach (PlayerVoteArea voteArea in __instance.PlayerStates)
+				{
+					if (Main.Instance.GetLocalModdedPlayer("HeadMaster").Votes > 0)
+					{
+						GameObject confirmButton = voteArea.Buttons.transform.GetChild(0).gameObject;
+						GameObject cancelButton = voteArea.Buttons.transform.GetChild(1).gameObject;
+					}
+				}
+			}
             if (Main.Instance.GetLocalModdedPlayer().HasItem(3))
             {
                 foreach (PlayerVoteArea voteArea in __instance.playerStates)
