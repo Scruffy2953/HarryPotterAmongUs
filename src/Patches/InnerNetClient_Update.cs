@@ -42,6 +42,8 @@ namespace HarryPotter.Patches
                         Main.Instance.RpcRequestRole("Voldemort");
                     if (Input.GetKeyDown(KeyCode.Alpha5))
                         Main.Instance.RpcRequestRole("Bellatrix");
+					if (Input.GetKeyDown(KeyCode.Alpha6))
+						Main.Instance.RpcRequestRole("HeadMaster");
                 }
             }
             

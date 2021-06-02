@@ -117,7 +117,7 @@ namespace HarryPotter
             {
                 __instance.text.transform.localPosition = new Vector3(1.575f, 2.6f, __instance.text.transform.localPosition.z);
                 __instance.text.fontSize = 2.5f;
-                __instance.text.text += "\n<#7289DAFF>Hunter101#1337";
+                __instance.text.text += "\n<#7289DAFF>Scruffy2953#6785";
                 __instance.text.text += "\n<#00DDFFFF>www.computable.us";
             }
             else
@@ -128,7 +128,7 @@ namespace HarryPotter
                 __instance.text.transform.localPosition = new Vector3(0, 0, 0);
                 Vector3 topRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height));
                 __instance.text.transform.position = new Vector3(topRight.x - 0.1f, topRight.y - 1.6f);
-                __instance.text.text += "\nCreated by: <#7289DAFF>Hunter101#1337";
+                __instance.text.text += "\nCreated by: <#7289DAFF>Scruffy2953#6785";
                 __instance.text.text += "\n<#FFFFFFFF>Download at: <#00DDFFFF>www.computable.us";
                 __instance.text.text += "\n<#FFFFFFFF>Original Design by: <#88FF00FF>npc & friends";
                 __instance.text.text += "\n<#FFFFFFFF>Art by: <#E67E22FF>PhasmoFireGod";

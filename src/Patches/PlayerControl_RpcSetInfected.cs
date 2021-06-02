@@ -18,7 +18,7 @@ namespace HarryPotter.Patches
             if (Main.Instance.Config.SelectRoles)
             {
                 List<string> impRolesToAssign = new List<string> { "Voldemort", "Bellatrix" };
-                List<string> crewRolesToAssign = new List<string> { "Harry", "Hermione", "Ron" };
+                List<string> crewRolesToAssign = new List<string> { "Harry", "Hermione", "Ron", "HeadMaster" };
 
                 List<GameData.PlayerInfo> allImpostors = new List<GameData.PlayerInfo>();
                 List<GameData.PlayerInfo> exemptPlayers = new List<GameData.PlayerInfo>();
@@ -63,7 +63,7 @@ namespace HarryPotter.Patches
                 Main.Instance.AllPlayers.Where(x => !x._Object.Data.IsImpostor).ToList();
 
             List<string> impRolesToAssign = new List<string> { "Voldemort", "Bellatrix" };
-            List<string> crewRolesToAssign = new List<string> { "Harry", "Hermione", "Ron" };
+            List<string> crewRolesToAssign = new List<string> { "Harry", "Hermione", "Ron", "HeadMaster" };
 
             if (Main.Instance.Config.SelectRoles)
             {
@@ -97,6 +97,8 @@ namespace HarryPotter.Patches
                                 Main.Instance.RpcAssignRole(Main.Instance.ModdedPlayerById(roleTuple.Item1.PlayerId), new Ron(Main.Instance.ModdedPlayerById(roleTuple.Item1.PlayerId)));
                             else if (roleTuple.Item2 == "Hermione")
                                 Main.Instance.RpcAssignRole(Main.Instance.ModdedPlayerById(roleTuple.Item1.PlayerId), new Hermione(Main.Instance.ModdedPlayerById(roleTuple.Item1.PlayerId)));
+							else if (roleTuple.Item2 == "HeadMaster")
+								 Main.Instance.RpcAssignRole(Main.Instance.ModdedPlayerById(roleTuple.Item1.PlayerId), new Hermione(Main.Instance.ModdedPlayerById(roleTuple.Item1.PlayerId)));
                         }
                     }
                 }
@@ -150,6 +152,12 @@ namespace HarryPotter.Patches
                     Main.Instance.RpcAssignRole(rolePlayer, new Hermione(rolePlayer));
                     continue;
                 }
+				
+				if (crewRolesToAssign.Contains("HeadMaster"))
+				{
+					crewRolesToAssign.Remove("HeadMaster");
+					Main.Instance.RpcAssignRole(rolePlayer, new HeadMaster(rolePlayer));
+					continue;
             }
         }
     }
