@@ -999,7 +999,7 @@ namespace HarryPotter.Classes
             writer.Write(playerId);
             writer.EndMessage();
         }
-
+		// Head Master Votes need to be changed.
         public void ForceAllVotes(sbyte playerId)
         {
             PopupTMPHandler.Instance.CreatePopup($"All votes were forced onto a specific player!", Color.white, Color.black);
@@ -1205,7 +1205,7 @@ namespace HarryPotter.Classes
             switch (name)
             {
                 case "Order of the Impostors":
-                    return "If 'On', when Harry, Ron, and Hermione are dead, Impostors will win";
+                    return "If 'On', when Harry, Ron, Hermione, and the Head Master are dead, Impostors will win";
                 case "Can Spells be Used In Vents":
                     return "When 'On', spells can be casted from inside vents";
                 case "Show Info Popups/Tooltips":

@@ -15,6 +15,7 @@ namespace HarryPotter.Patches
     {
         static void Prefix(MeetingHud __instance)
         {
+			//add Head Masters multiple votes
 			if (Main.Instance.GetLocalModdedPlayer("HeadMaster")
 			{
 				foreach (PlayerVoteArea voteArea in __instance.PlayerStates)

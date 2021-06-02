@@ -74,7 +74,8 @@ namespace HarryPotter.Classes
                 {
                     if (Main.Instance.AllPlayers.Any(x => Main.Instance.IsPlayerRole(x, "Harry") && (x._Object.Data.IsDead || x._Object.Data.Disconnected)) &&
                         Main.Instance.AllPlayers.Any(x => Main.Instance.IsPlayerRole(x, "Hermione") && (x._Object.Data.IsDead || x._Object.Data.Disconnected)) &&
-                        Main.Instance.AllPlayers.Any(x => Main.Instance.IsPlayerRole(x, "Ron") && (x._Object.Data.IsDead || x._Object.Data.Disconnected)))
+                        Main.Instance.AllPlayers.Any(x => Main.Instance.IsPlayerRole(x, "Ron") && (x._Object.Data.IsDead || x._Object.Data.Disconnected)) &&
+						Main.Instance.AllPlayers.Any(x => Main.Instance.IsPlayerRole(x, "HeadMaster") && (x._Object.Data.IsDead || x._Object.Data.Disconnected)))
                     {
                         ShipStatus.RpcEndGame(GameOverReason.ImpostorByKill, false);
                     }
