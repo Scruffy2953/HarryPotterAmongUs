@@ -73,7 +73,6 @@ namespace HarryPotter.Classes
                             break;
 						case "HeadMaster":
 							rolePlayer.Role = new HeadMaster(rolePlayer);
-							break;
                     }
                     break;
                 case (byte)Packets.RequestRole:
